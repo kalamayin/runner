@@ -1,0 +1,67 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1001 &5728069011494137347
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 447111432924405214, guid: f6770a19cdbf113479dda1135ee288ad, type: 3}
+      propertyPath: m_Text
+      value: Cursed Hand
+      objectReference: {fileID: 0}
+    - target: {fileID: 507667954093847300, guid: f6770a19cdbf113479dda1135ee288ad, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: fca55f1d8adce7a498a368c52b7151ac, type: 2}
+    - target: {fileID: 524759831861151542, guid: f6770a19cdbf113479dda1135ee288ad, type: 3}
+      propertyPath: m_RootOrder
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 524759831861151542, guid: f6770a19cdbf113479dda1135ee288ad, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 1.98
+      objectReference: {fileID: 0}
+    - target: {fileID: 524759831861151542, guid: f6770a19cdbf113479dda1135ee288ad, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 1.14
+      objectReference: {fileID: 0}
+    - target: {fileID: 524759831861151542, guid: f6770a19cdbf113479dda1135ee288ad, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 11.87
+      objectReference: {fileID: 0}
+    - target: {fileID: 524759831861151542, guid: f6770a19cdbf113479dda1135ee288ad, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 524759831861151542, guid: f6770a19cdbf113479dda1135ee288ad, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 524759831861151542, guid: f6770a19cdbf113479dda1135ee288ad, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 524759831861151542, guid: f6770a19cdbf113479dda1135ee288ad, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 524759831861151542, guid: f6770a19cdbf113479dda1135ee288ad, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 524759831861151542, guid: f6770a19cdbf113479dda1135ee288ad, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 524759831861151542, guid: f6770a19cdbf113479dda1135ee288ad, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 530743367438342378, guid: f6770a19cdbf113479dda1135ee288ad, type: 3}
+      propertyPath: m_Name
+      value: Cursed Coin
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: f6770a19cdbf113479dda1135ee288ad, type: 3}
