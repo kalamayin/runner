@@ -19,6 +19,7 @@ public class PlayerMovement : MonoBehaviour
     void FixedUpdate()
     {
          
-        playerRB.velocity = new Vector3(Input.GetAxis("Horizontal") * horizontalSpeed, playerRB.velocity.y, 1f * forwardSpeed);
+        if(!PlayerController.gameOver)playerRB.velocity = new Vector3(Input.GetAxis("Horizontal") * horizontalSpeed,
+            playerRB.velocity.y, 1f * forwardSpeed);
     }
 }
