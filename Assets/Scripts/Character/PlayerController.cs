@@ -26,4 +26,22 @@ public class PlayerController : MonoBehaviour
         }
     }
 
+    private void OnTriggerEnter(Collider other)
+    {
+        if (other.gameObject.CompareTag("Positive"))
+        {
+            TouchCards(other.gameObject.tag, other.gameObject.name);
+        }
+        else if (other.gameObject.CompareTag("Negative"))
+        {
+            TouchCards(other.gameObject.tag, other.gameObject.name);
+        }
+    }
+
+    void TouchCards(string tag, string name)
+    {
+        CardManager cardManager = GameObject.FindGameObjectWithTag("CardManager").GetComponent<CardManager>();
+        cardManager.ChooseEffect(tag, name);
+    }
+
 }

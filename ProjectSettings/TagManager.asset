@@ -6,6 +6,11 @@ TagManager:
   tags:
   - Obstacle
   - FinishLine
+  - Ground
+  - Cannon
+  - CardManager
+  - Negative
+  - Positive
   layers:
   - Default
   - TransparentFX

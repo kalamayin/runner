@@ -18,10 +18,12 @@ public class HalfDonut : MonoBehaviour
     [SerializeField] float force;
     Rigidbody characterRB;
 
+    public static float coeff;
+
     // Start is called before the first frame update
     void Start()
     {
-        speed = 0f;
+        coeff = 1f;
         StartCoroutine(Delay());
         distance = 0.131f;
         duration = 1f;
@@ -42,7 +44,7 @@ public class HalfDonut : MonoBehaviour
     void Patrol()
     {
         
-        transform.position = Vector3.MoveTowards(transform.position, target, speed);
+        transform.position = Vector3.MoveTowards(transform.position, target, speed * coeff);
         if (Vector3.Distance(transform.position, startPos) <= 0.01f)
         {
             time -= Time.deltaTime;
@@ -69,9 +71,11 @@ public class HalfDonut : MonoBehaviour
 
     IEnumerator Delay()
     {
+        float temp = speed;
+        speed = 0f;
         float time = Random.Range(0, 1f);
         yield return new WaitForSeconds(time);
-        speed = 0.005f;
+        speed = temp;
     }
 
 }

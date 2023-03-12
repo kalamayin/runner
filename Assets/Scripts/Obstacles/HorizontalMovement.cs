@@ -13,8 +13,11 @@ public class HorizontalMovement : MonoBehaviour
 
     public bool left, right;
 
+    public static float coeff;
+
     private void Start()
     {
+        coeff = 1;
         index = Random.Range(0, 2);
         if (index == 0) left = true;
         else if (index == 1) right = true;
@@ -28,7 +31,7 @@ public class HorizontalMovement : MonoBehaviour
     void Patrol()
     {
         patrol = new Vector3(points[index].x, transform.position.y, transform.position.z);
-        transform.position = Vector3.MoveTowards(transform.position, patrol, patrolSpeed);
+        transform.position = Vector3.MoveTowards(transform.position, patrol, patrolSpeed * coeff);
         if(Vector3.Distance(transform.position, patrol) <= 0.1f)
         {
             if (index == 0)

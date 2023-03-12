@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 705507994}
-  m_IndirectSpecularColor: {r: 0.18028378, g: 0.22571412, b: 0.30692285, a: 1}
+  m_IndirectSpecularColor: {r: 0.18028334, g: 0.2257134, b: 0.30692226, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -6992,14 +6992,8 @@ Transform:
   - {fileID: 356781807}
   - {fileID: 134546468}
   - {fileID: 1996687649}
+  - {fileID: 716374800}
   - {fileID: 27381194}
-  - {fileID: 1937299527}
-  - {fileID: 425756571}
-  - {fileID: 317567642}
-  - {fileID: 1933506618}
-  - {fileID: 1744854623}
-  - {fileID: 1170852336}
-  - {fileID: 2051243570}
   - {fileID: 2011134092}
   - {fileID: 2029141587}
   - {fileID: 421707555}
@@ -7008,10 +7002,11 @@ Transform:
   - {fileID: 1725342407}
   - {fileID: 874938019}
   - {fileID: 1037352222}
-  - {fileID: 716374800}
-  - {fileID: 1601679760}
+  - {fileID: 425756571}
+  - {fileID: 1170852336}
+  - {fileID: 317567642}
   - {fileID: 780508915}
-  - {fileID: 2127821147}
+  - {fileID: 1744854623}
   - {fileID: 501810908}
   - {fileID: 1617208383}
   - {fileID: 1685491229}
@@ -7019,6 +7014,7 @@ Transform:
   - {fileID: 359566312}
   - {fileID: 1719909656}
   - {fileID: 1564052658}
+  - {fileID: 2127821147}
   - {fileID: 429911300}
   - {fileID: 54395909}
   - {fileID: 1490840507}
@@ -7028,16 +7024,20 @@ Transform:
   - {fileID: 1571733377}
   - {fileID: 1181474674}
   - {fileID: 1014493578}
+  - {fileID: 1601679760}
   - {fileID: 804464555}
   - {fileID: 1290462859}
   - {fileID: 106923834}
+  - {fileID: 2051243570}
   - {fileID: 804756490}
+  - {fileID: 1937299527}
   - {fileID: 3552588}
   - {fileID: 242247653}
   - {fileID: 975053334}
   - {fileID: 1323863679}
   - {fileID: 882330619}
   - {fileID: 1847285819}
+  - {fileID: 1933506618}
   - {fileID: 92159874}
   - {fileID: 1152894545}
   - {fileID: 1582338252}
@@ -10991,6 +10991,90 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 1447256933, guid: c0e095fcea4ab9d41bfa1cf75a32235c, type: 3}
   m_PrefabInstance: {fileID: 1784778804}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &1791599130
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1791599133}
+  - component: {fileID: 1791599132}
+  - component: {fileID: 1791599131}
+  m_Layer: 0
+  m_Name: ManiCamera
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!81 &1791599131
+AudioListener:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1791599130}
+  m_Enabled: 1
+--- !u!20 &1791599132
+Camera:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1791599130}
+  m_Enabled: 1
+  serializedVersion: 2
+  m_ClearFlags: 1
+  m_BackGroundColor: {r: 0.19215687, g: 0.3019608, b: 0.4745098, a: 0}
+  m_projectionMatrixMode: 1
+  m_GateFitMode: 2
+  m_FOVAxisMode: 0
+  m_SensorSize: {x: 36, y: 24}
+  m_LensShift: {x: 0, y: 0}
+  m_FocalLength: 50
+  m_NormalizedViewPortRect:
+    serializedVersion: 2
+    x: 0
+    y: 0
+    width: 1
+    height: 1
+  near clip plane: 0.3
+  far clip plane: 1000
+  field of view: 60
+  orthographic: 0
+  orthographic size: 5
+  m_Depth: 0
+  m_CullingMask:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_RenderingPath: -1
+  m_TargetTexture: {fileID: 0}
+  m_TargetDisplay: 0
+  m_TargetEye: 3
+  m_HDR: 1
+  m_AllowMSAA: 1
+  m_AllowDynamicResolution: 0
+  m_ForceIntoRT: 0
+  m_OcclusionCulling: 1
+  m_StereoConvergence: 10
+  m_StereoSeparation: 0.022
+--- !u!4 &1791599133
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1791599130}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 14
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &1800801768
 PrefabInstance:
   m_ObjectHideFlags: 0

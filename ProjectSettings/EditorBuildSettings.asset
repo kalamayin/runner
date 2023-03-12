@@ -4,5 +4,23 @@
 EditorBuildSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 2
-  m_Scenes: []
+  m_Scenes:
+  - enabled: 1
+    path: Assets/Scenes/Deneme.unity
+    guid: 606d485b4c52e514da6f3f7aeefee23d
+  - enabled: 1
+    path: Assets/Scenes/Level 01.unity
+    guid: 9fc0d4010bbf28b4594072e72b8655ab
+  - enabled: 1
+    path: Assets/Scenes/Level 02.unity
+    guid: 47f22b4e2be997144b20d96d6699c93c
+  - enabled: 1
+    path: Assets/Scenes/Level 03.unity
+    guid: 23df73ade6d9f71459e533d25360ac51
+  - enabled: 1
+    path: Assets/Scenes/Level 04.unity
+    guid: 8a9835e55bc88df4cb41b18c77a6ada9
+  - enabled: 1
+    path: Assets/Scenes/Level 05.unity
+    guid: 14dcdf1ad7fa83b44a3bd2f83e2e214a
   m_configObjects: {}

@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 705507994}
-  m_IndirectSpecularColor: {r: 0.18028378, g: 0.22571412, b: 0.30692285, a: 1}
+  m_IndirectSpecularColor: {r: 0.18028334, g: 0.2257134, b: 0.30692226, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -12127,7 +12127,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 7774109170957802328, guid: 96fd7a0df3081a7468dcad6236b70529, type: 3}
       propertyPath: m_RootOrder
-      value: 72
+      value: 94
       objectReference: {fileID: 0}
     - target: {fileID: 7774109170957802328, guid: 96fd7a0df3081a7468dcad6236b70529, type: 3}
       propertyPath: m_LocalPosition.x
@@ -12139,7 +12139,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7774109170957802328, guid: 96fd7a0df3081a7468dcad6236b70529, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 139.82692
+      value: 140
       objectReference: {fileID: 0}
     - target: {fileID: 7774109170957802328, guid: 96fd7a0df3081a7468dcad6236b70529, type: 3}
       propertyPath: m_LocalRotation.w
@@ -17176,7 +17176,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 90
+  m_RootOrder: 113
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &447167341
 PrefabInstance:
@@ -39330,7 +39330,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5238804244381091419, guid: 941f6700791003a48ad13f9c47a66637, type: 3}
       propertyPath: m_RootOrder
-      value: 65
+      value: 88
       objectReference: {fileID: 0}
     - target: {fileID: 5238804244381091419, guid: 941f6700791003a48ad13f9c47a66637, type: 3}
       propertyPath: m_AnchorMax.x
@@ -40543,7 +40543,8 @@ PrefabInstance:
       propertyPath: m_Name
       value: Super Jump Variant (1)
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 7666661188996225202, guid: 96fd7a0df3081a7468dcad6236b70529, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: 96fd7a0df3081a7468dcad6236b70529, type: 3}
 --- !u!1001 &1082851190
 PrefabInstance:
@@ -43504,7 +43505,7 @@ Transform:
   - {fileID: 1392123495}
   - {fileID: 200804934}
   m_Father: {fileID: 0}
-  m_RootOrder: 88
+  m_RootOrder: 111
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!4 &1176931896 stripped
 Transform:

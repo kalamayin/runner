@@ -1,13 +1,9 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using TMPro;
 
-public class Timing : MonoBehaviour
+public class LevelManager : MonoBehaviour
 {
-    [SerializeField] TextMeshProUGUI timer;
-
-    public float count;
     // Start is called before the first frame update
     void Start()
     {
@@ -17,7 +13,6 @@ public class Timing : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        count += Time.deltaTime;
-        timer.text = count.ToString("0");
+        
     }
 }
