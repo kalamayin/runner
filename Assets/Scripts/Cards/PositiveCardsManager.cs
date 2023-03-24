@@ -88,10 +88,12 @@ public class PositiveCardsManager : MonoBehaviour
 
     IEnumerator SuperSpeed(float time)
     {
+        Debug.Log("Girdi");
         PlayerMovement movement = GameObject.FindGameObjectWithTag("Player").GetComponent<PlayerMovement>();
         movement.highCoeff = speedCoeff;
-        yield return new WaitForSeconds(time);
+        if(GameController.gameState == GameState.Playing) yield return new WaitForSeconds(time);
         movement.highCoeff = 1f;
+        Debug.Log("Çýktý" + GameController.gameState);
     }
 
     IEnumerator Dash(float time)

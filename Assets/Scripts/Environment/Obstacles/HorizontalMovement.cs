@@ -25,7 +25,7 @@ public class HorizontalMovement : MonoBehaviour
 
     void FixedUpdate()
     {
-        Patrol();
+        if (GameController.gameState == GameState.Playing) Patrol();
     }
 
     void Patrol()

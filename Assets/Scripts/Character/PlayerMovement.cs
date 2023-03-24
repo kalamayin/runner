@@ -4,8 +4,6 @@ using UnityEngine;
 
 public class PlayerMovement : MonoBehaviour
 {
-    //public const float FORWARD = 2f;
-    //public const float HORIZONTAL = 3f;
     [SerializeField] float forwardSpeed, horizontalSpeed;
 
     public float jumpForce, dashForce;
@@ -14,10 +12,8 @@ public class PlayerMovement : MonoBehaviour
 
     float coeff;
 
-    bool ground;
-    
-
     public Rigidbody playerRB;
+
 
     // Start is called before the first frame update
     void Start()
@@ -31,17 +27,7 @@ public class PlayerMovement : MonoBehaviour
     void FixedUpdate()
     {
         coeff = highCoeff / frac;
-        if (!PlayerController.gameOver ) playerRB.velocity = new Vector3(Input.GetAxis("Horizontal") * horizontalSpeed * coeff,
+        if (GameController.gameState == GameState.Playing) playerRB.velocity = new Vector3(Input.GetAxis("Horizontal") * horizontalSpeed * coeff,
             playerRB.velocity.y, 1f * forwardSpeed * coeff);
-    }
-
-    private void OnCollisionEnter(Collision collision)
-    {
-        if (collision.gameObject.CompareTag("Ground")) ground = true;
-    }
-
-    private void OnCollisionExit(Collision collision)
-    {
-        if (collision.gameObject.CompareTag("Ground")) ground = false;
     }
 }

@@ -15,7 +15,7 @@ public class OpenLevel : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        PlayerPrefs.DeleteKey("MaxLevel");
+        //PlayerPrefs.DeleteKey("MaxLevel");
         if (!PlayerPrefs.HasKey("MaxLevel")) PlayerPrefs.SetInt("MaxLevel", 1);
         //PlayerPrefs.SetInt("MaxLevel", 3);
         Debug.Log("Level: " + PlayerPrefs.GetInt("MaxLevel"));

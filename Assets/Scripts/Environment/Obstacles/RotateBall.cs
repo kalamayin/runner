@@ -16,6 +16,7 @@ public class RotateBall : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        transform.localEulerAngles = new Vector3(0f, 0f, Mathf.Sin(Time.time * rotateSpeed * coeff) * 45f);
+        if (GameController.gameState == GameState.Playing) 
+            transform.localEulerAngles = new Vector3(0f, 0f, Mathf.Sin(Time.time * rotateSpeed * coeff) * 45f);
     }
 }

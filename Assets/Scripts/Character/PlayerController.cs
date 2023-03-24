@@ -4,12 +4,12 @@ using UnityEngine;
 
 public class PlayerController : MonoBehaviour
 {
-    public static bool gameOver;
+    
 
     // Start is called before the first frame update
     void Start()
     {
-        gameOver = false;
+        
     }
 
     // Update is called once per frame
@@ -22,7 +22,12 @@ public class PlayerController : MonoBehaviour
     {
         if (collision.gameObject.CompareTag("Obstacle"))
         {
-            gameOver = true;
+            GameController.gameState = GameState.GameOver;
+        }
+        else if (collision.gameObject.CompareTag("Finish"))
+        {
+            GameController.gameState = GameState.Finish;
+            Debug.Log("Finish line: " + GameController.gameState);
         }
     }
 

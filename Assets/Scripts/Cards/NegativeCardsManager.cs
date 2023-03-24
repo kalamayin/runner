@@ -35,8 +35,8 @@ public class NegativeCardsManager : MonoBehaviour
 
     void AddTime()
     {
-        Timing timer = GameObject.Find("Timer").GetComponent<Timing>();
-        timer.count += addTime;
+        //TimeManager.count = GameObject.Find("Timer").GetComponent<Timing>();
+        TimeManager.count += addTime;
     }
 
     void CreateCannon()

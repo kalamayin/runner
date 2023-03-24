@@ -38,7 +38,7 @@ public class HalfDonut : MonoBehaviour
     // Update is called once per frame
     void FixedUpdate()
     {
-        Patrol();
+        if (GameController.gameState == GameState.Playing) Patrol();
     }
 
     void Patrol()

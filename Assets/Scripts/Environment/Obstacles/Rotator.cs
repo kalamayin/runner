@@ -15,7 +15,7 @@ public class Rotator : MonoBehaviour
 
     void FixedUpdate()
     {
-        transform.Rotate(Vector3.up * speed * coeff);
+        if(GameController.gameState == GameState.Playing) transform.Rotate(Vector3.up * speed * coeff);
     }
 
     IEnumerator Delay()

@@ -15,7 +15,7 @@ public class RotatingPlatform : MonoBehaviour
     // Update is called once per frame
     void FixedUpdate()
     {
-        transform.Rotate(Vector3.forward * speed * coeff);
+        if (GameController.gameState == GameState.Playing) transform.Rotate(Vector3.forward * speed * coeff);
     }
 
     private void OnCollisionStay(Collision collision)

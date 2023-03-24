@@ -5,21 +5,28 @@ using UnityEngine;
 
 public class CardImageManager : MonoBehaviour
 {
-    [SerializeField] RectTransform positiveButton;
+    [SerializeField] List<RectTransform> positiveButtons;
     [SerializeField] float speed, scaleSpeed, rotateSpeed;
     [SerializeField] Vector2 imageScale;
     RectTransform imageTransform;
 
     [SerializeField] float time;
 
+    Vector2 target;
+
     bool isStart;
+
+    int index = 0;
 
     private void OnEnable()
     {
         imageTransform = GetComponent<RectTransform>();
         imageTransform.anchoredPosition = Vector2.zero;
+        imageTransform.rotation = Quaternion.identity;
         imageTransform.sizeDelta = imageScale;
         StartCoroutine(WaitForAnim());
+        target = RectTransformUtility.WorldToScreenPoint(Camera.main, positiveButtons[CardManager.buttonIndex].transform.position);
+        SetIndex();
     }
 
     // Update is called once per frame
@@ -27,16 +34,22 @@ public class CardImageManager : MonoBehaviour
     {
         if (isStart)
         {
-            Vector2 obj, target;
+            Vector2 obj;
             obj = RectTransformUtility.WorldToScreenPoint(Camera.main, gameObject.transform.position);
-            target = RectTransformUtility.WorldToScreenPoint(Camera.main, positiveButton.transform.position);
             
             gameObject.transform.position = Vector2.MoveTowards(obj, target, speed);
             imageTransform.sizeDelta = Vector2.MoveTowards(imageTransform.sizeDelta,
-                positiveButton.sizeDelta, scaleSpeed);
+                positiveButtons[CardManager.buttonIndex].sizeDelta, scaleSpeed);
             imageTransform.Rotate(new Vector3(0f, rotateSpeed, 0f));
-            if (Vector2.Distance(gameObject.transform.position, positiveButton.transform.position) <= 5) gameObject.SetActive(false);
+            if (Vector2.Distance(gameObject.transform.position, target) <= 5)
+                gameObject.SetActive(false);
         }
+    }
+
+    void SetIndex()
+    {
+        if (index < positiveButtons.Count - 1) index++;
+        else index = positiveButtons.Count - 1;
     }
 
     IEnumerator WaitForAnim()
