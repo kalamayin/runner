@@ -23,8 +23,8 @@ public class NegativeCardsManager : MonoBehaviour
     {
         negativeEffects += LowSpeed;
         negativeEffects += AddTime;
-        negativeEffects += CreateCannon;
         negativeEffects += ObstacleSpeedUp;
+        negativeEffects += CreateCannon;
         negativeEffects += Unmagnet;
     }
 
