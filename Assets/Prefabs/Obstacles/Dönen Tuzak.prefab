@@ -47,6 +47,10 @@ PrefabInstance:
       propertyPath: m_Materials.Array.data[0]
       value: 
       objectReference: {fileID: 2100000, guid: 6bee845ff1eaef240857a6d6e4f7ffd5, type: 2}
+    - target: {fileID: 1231821482541816760, guid: 1963f84805859264fbfd2f3d229b7a05, type: 3}
+      propertyPath: direction
+      value: -1
+      objectReference: {fileID: 0}
     - target: {fileID: 1626633314453021370, guid: 1963f84805859264fbfd2f3d229b7a05, type: 3}
       propertyPath: m_RootOrder
       value: 3
@@ -144,6 +148,14 @@ PrefabInstance:
       propertyPath: m_Materials.Array.data[0]
       value: 
       objectReference: {fileID: 2100000, guid: 6bee845ff1eaef240857a6d6e4f7ffd5, type: 2}
+    - target: {fileID: 1231821482541816760, guid: 1963f84805859264fbfd2f3d229b7a05, type: 3}
+      propertyPath: speed
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 1231821482541816760, guid: 1963f84805859264fbfd2f3d229b7a05, type: 3}
+      propertyPath: direction
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 1626633314453021370, guid: 1963f84805859264fbfd2f3d229b7a05, type: 3}
       propertyPath: m_RootOrder
       value: 0
@@ -241,6 +253,10 @@ PrefabInstance:
       propertyPath: m_Materials.Array.data[0]
       value: 
       objectReference: {fileID: 2100000, guid: 6bee845ff1eaef240857a6d6e4f7ffd5, type: 2}
+    - target: {fileID: 1231821482541816760, guid: 1963f84805859264fbfd2f3d229b7a05, type: 3}
+      propertyPath: direction
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 1626633314453021370, guid: 1963f84805859264fbfd2f3d229b7a05, type: 3}
       propertyPath: m_RootOrder
       value: 1
@@ -338,6 +354,14 @@ PrefabInstance:
       propertyPath: m_Materials.Array.data[0]
       value: 
       objectReference: {fileID: 2100000, guid: 6bee845ff1eaef240857a6d6e4f7ffd5, type: 2}
+    - target: {fileID: 1231821482541816760, guid: 1963f84805859264fbfd2f3d229b7a05, type: 3}
+      propertyPath: speed
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 1231821482541816760, guid: 1963f84805859264fbfd2f3d229b7a05, type: 3}
+      propertyPath: direction
+      value: -1
+      objectReference: {fileID: 0}
     - target: {fileID: 1626633314453021370, guid: 1963f84805859264fbfd2f3d229b7a05, type: 3}
       propertyPath: m_RootOrder
       value: 2

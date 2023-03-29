@@ -108,8 +108,12 @@ PrefabInstance:
       value: SallananTop (4)
       objectReference: {fileID: 0}
     - target: {fileID: 1604059345426151787, guid: eca5c669966e4ed4d8b8f10250821cca, type: 3}
+      propertyPath: direction
+      value: -1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1604059345426151787, guid: eca5c669966e4ed4d8b8f10250821cca, type: 3}
       propertyPath: rotateSpeed
-      value: 1.8
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: eca5c669966e4ed4d8b8f10250821cca, type: 3}
@@ -190,8 +194,12 @@ PrefabInstance:
       value: SallananTop (1)
       objectReference: {fileID: 0}
     - target: {fileID: 1604059345426151787, guid: eca5c669966e4ed4d8b8f10250821cca, type: 3}
+      propertyPath: direction
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1604059345426151787, guid: eca5c669966e4ed4d8b8f10250821cca, type: 3}
       propertyPath: rotateSpeed
-      value: 1.2
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: eca5c669966e4ed4d8b8f10250821cca, type: 3}
@@ -272,8 +280,12 @@ PrefabInstance:
       value: SallananTop (3)
       objectReference: {fileID: 0}
     - target: {fileID: 1604059345426151787, guid: eca5c669966e4ed4d8b8f10250821cca, type: 3}
+      propertyPath: direction
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1604059345426151787, guid: eca5c669966e4ed4d8b8f10250821cca, type: 3}
       propertyPath: rotateSpeed
-      value: 1.6
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: eca5c669966e4ed4d8b8f10250821cca, type: 3}
@@ -354,8 +366,12 @@ PrefabInstance:
       value: SallananTop (2)
       objectReference: {fileID: 0}
     - target: {fileID: 1604059345426151787, guid: eca5c669966e4ed4d8b8f10250821cca, type: 3}
+      propertyPath: direction
+      value: -1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1604059345426151787, guid: eca5c669966e4ed4d8b8f10250821cca, type: 3}
       propertyPath: rotateSpeed
-      value: 1.4
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: eca5c669966e4ed4d8b8f10250821cca, type: 3}
@@ -434,6 +450,10 @@ PrefabInstance:
     - target: {fileID: 1604059345426151786, guid: eca5c669966e4ed4d8b8f10250821cca, type: 3}
       propertyPath: m_Name
       value: SallananTop
+      objectReference: {fileID: 0}
+    - target: {fileID: 1604059345426151787, guid: eca5c669966e4ed4d8b8f10250821cca, type: 3}
+      propertyPath: direction
+      value: -1
       objectReference: {fileID: 0}
     - target: {fileID: 1604059345426151787, guid: eca5c669966e4ed4d8b8f10250821cca, type: 3}
       propertyPath: rotateSpeed
