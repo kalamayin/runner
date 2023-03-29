@@ -2,6 +2,9 @@ using UnityEngine;
 
 public class HorizontalMovement : MonoBehaviour
 {
+    [Range(-1, 1)]
+    [SerializeField] int direction;
+
     [SerializeField]
     Vector3[] points;
 
@@ -11,16 +14,15 @@ public class HorizontalMovement : MonoBehaviour
 
     int index;
 
-    public bool left, right;
 
     public static float coeff;
 
     private void Start()
     {
         coeff = 1;
-        index = Random.Range(0, 2);
-        if (index == 0) left = true;
-        else if (index == 1) right = true;
+        if(direction == 0) SetDirectionRandomly();
+        if (direction == -1) index = 1;
+        else if (direction == 1) index = 0;
     }
 
     void FixedUpdate()
@@ -37,16 +39,27 @@ public class HorizontalMovement : MonoBehaviour
             if (index == 0)
             {
                 index++;
-                left = false;
-                right = true;
             }
             else if (index == 1)
             {
                 index--;
-                right = false;
-                left = true;
             }
         }
     }
 
+    void SetDirectionRandomly()
+    {
+        int random = Random.Range(0, 2);
+        switch (random)
+        {
+            case 0:
+                direction = 1;
+                break;
+            case 1:
+                direction = -1;
+                break;
+            default:
+                break;
+        }
+    }
 }

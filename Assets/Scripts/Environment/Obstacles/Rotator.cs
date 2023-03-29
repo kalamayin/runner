@@ -14,7 +14,8 @@ public class Rotator : MonoBehaviour
     {
         coeff = 1f;
         StartCoroutine(Delay());
-        //if (direction == 0) SetDirectionRandomly();
+        Debug.Log(direction);
+        if (direction == 0) SetDirectionRandomly();
     }
 
     void FixedUpdate()
@@ -22,21 +23,21 @@ public class Rotator : MonoBehaviour
         if(GameController.gameState == GameState.Playing) transform.Rotate(Vector3.up * speed * direction * coeff);
     }
 
-    //void SetDirectionRandomly()
-    //{
-    //    int random = random.Range(0, 2);
-    //    switch (random)
-    //    {
-    //        case 0:
-    //            direction = 1;
-    //            break;
-    //        case 1:
-    //            direction = -1;
-    //            break;
-    //        default:
-    //            break;
-    //    }
-    //}
+    void SetDirectionRandomly()
+    {
+        int random = Random.Range(0, 2);
+        switch (random)
+        {
+            case 0:
+                direction = 1;
+                break;
+            case 1:
+                direction = -1;
+                break;
+            default:
+                break;
+        }
+    }
 
     IEnumerator Delay()
     {
