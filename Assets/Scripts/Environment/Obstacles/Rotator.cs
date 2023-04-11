@@ -14,7 +14,6 @@ public class Rotator : MonoBehaviour
     {
         coeff = 1f;
         StartCoroutine(Delay());
-        Debug.Log(direction);
         if (direction == 0) SetDirectionRandomly();
     }
 

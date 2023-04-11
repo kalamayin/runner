@@ -11,6 +11,7 @@ TagManager:
   - CardManager
   - Negative
   - Positive
+  - Coin
   layers:
   - Default
   - TransparentFX

@@ -18,9 +18,16 @@ public class PositiveCardsManager : MonoBehaviour
 
     [SerializeField] Vector3 dir;
 
+    string openedPositiveEffect = "OpenedPositiveEffect";
+
     public delegate void PositiveEffects();
 
     public PositiveEffects positiveEffects;
+
+    private void Awake()
+    {
+        if (!PlayerPrefs.HasKey(openedPositiveEffect)) PlayerPrefs.SetInt(openedPositiveEffect, 1);
+    }
 
     private void Start()
     {
@@ -68,7 +75,8 @@ public class PositiveCardsManager : MonoBehaviour
     public int ChooseRandomEffect(string name)
     {
         int random;
-        if (name == "RandomlyPositive") random = Random.Range(0, positiveEffects.GetInvocationList().Length);
+        int length = PlayerPrefs.GetInt(openedPositiveEffect);
+        if (name == "RandomlyPositive") random = Random.Range(0, length);
         else random = SetNumber(name);
 
         return random;
@@ -77,23 +85,44 @@ public class PositiveCardsManager : MonoBehaviour
     int SetNumber(string name)
     {
         int num = 0;
-        if (name == "SuperSpeed") num = 0;
-        else if (name == "SuperJump") num = 1;
-        else if (name == "Invisible") num = 2;
-        else if (name == "Dash") num = 3;
-        else if (name == "Magnet") num = 4;
+        switch (name)
+        {
+            case "SuperSpeed":
+                num = 0;
+                PlayerPrefs.SetInt(openedPositiveEffect, num + 1);
+                break;
+            case "SuperJump":
+                num = 1;
+                PlayerPrefs.SetInt(openedPositiveEffect, num + 1);
+                break;
+            case "Invisible":
+                num = 2;
+                PlayerPrefs.SetInt(openedPositiveEffect, num + 1);
+                break;
+            case "Dash":
+                num = 3;
+                PlayerPrefs.SetInt(openedPositiveEffect, num + 1);
+                break;
+            case "Magnet":
+                num = 4;
+                PlayerPrefs.SetInt(openedPositiveEffect, num + 1);
+                break;
+        }
+        //if (name == "SuperSpeed") num = 0;
+        //else if (name == "SuperJump") num = 1;
+        //else if (name == "Invisible") num = 2;
+        //else if (name == "Dash") num = 3;
+        //else if (name == "Magnet") num = 4;
         return num;
     }
 
 
     IEnumerator SuperSpeed(float time)
     {
-        Debug.Log("Girdi");
         PlayerMovement movement = GameObject.FindGameObjectWithTag("Player").GetComponent<PlayerMovement>();
         movement.highCoeff = speedCoeff;
         if(GameController.gameState == GameState.Playing) yield return new WaitForSeconds(time);
         movement.highCoeff = 1f;
-        Debug.Log("Çýktý" + GameController.gameState);
     }
 
     IEnumerator Dash(float time)
@@ -117,9 +146,9 @@ public class PositiveCardsManager : MonoBehaviour
 
     IEnumerator Magnet(float time)
     {
-        CoinManager.magnet = true;
+        CoinMovement.magnet = true;
         yield return new WaitForSeconds(time);
-        CoinManager.magnet = false;
+        CoinMovement.magnet = false;
     }
 
 }

@@ -4,39 +4,50 @@ using UnityEngine;
 
 public class CoinManager : MonoBehaviour
 {
-    [SerializeField] float speed;
-    [SerializeField] float translateSpeed;
+    int coinCount;
 
-    public static bool magnet, unmagnet;
+    //int maxCoinNumber;
+
+    bool finish;
+
+    string maxCoinNumber = "MaxCoinNumber";
+
+    private void Awake()
+    {
+        if (!PlayerPrefs.HasKey(maxCoinNumber)) PlayerPrefs.SetInt(maxCoinNumber, 0);
+    }
+
     // Start is called before the first frame update
     void Start()
     {
-        magnet = false;
-        unmagnet = false;
+        finish = false;
+        coinCount = 0;
     }
 
     // Update is called once per frame
-    void FixedUpdate()
+    void Update()
     {
-        if (magnet) Magnet();
-        if (unmagnet) UnMagnet();
+        SetMaxNumber();
     }
 
-    void Magnet()
+    private void OnTriggerEnter(Collider other)
     {
-        Transform target = GameObject.FindGameObjectWithTag("Player").GetComponent<Transform>();
-        Vector3 targetPos = target.position;
-        if (Vector3.Distance(targetPos, transform.position) <= 15f)
-            transform.position = Vector3.MoveTowards(transform.position, targetPos, speed);
+        if (other.gameObject.CompareTag("Coin"))
+        {
+            coinCount++;
+            Destroy(other.gameObject);
+        }
     }
 
-    void UnMagnet()
+    void SetMaxNumber()
     {
-        Transform target = GameObject.FindGameObjectWithTag("Player").GetComponent<Transform>();
-        Vector3 targetPos = target.position;
-        Vector3 dir = transform.position - targetPos;
-        if (Vector3.Distance(targetPos, transform.position) <= 20f)
-            transform.Translate(dir.normalized * translateSpeed);
+        if (GameController.gameState == GameState.Finish && !finish)
+        {
+            finish = true;
+            int maxNumber = PlayerPrefs.GetInt(maxCoinNumber);
+            PlayerPrefs.SetInt(maxCoinNumber, maxNumber + coinCount);
+            coinCount = 0;
+        }
     }
 
 }

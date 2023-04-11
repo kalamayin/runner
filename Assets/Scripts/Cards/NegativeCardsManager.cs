@@ -15,9 +15,16 @@ public class NegativeCardsManager : MonoBehaviour
 
     [SerializeField] GameObject cannon;
 
+    string openedNegativeEffect = "OpenedNegativeEffect";
+
     public delegate void NegativeEffects();
 
     public NegativeEffects negativeEffects;
+
+    private void Awake()
+    {
+        if (!PlayerPrefs.HasKey(openedNegativeEffect)) PlayerPrefs.SetInt(openedNegativeEffect, 1);
+    }
 
     private void Start()
     {
@@ -57,7 +64,8 @@ public class NegativeCardsManager : MonoBehaviour
     public int ChooseRandomEffect(string name)
     {
         int random;
-        if (name == "RandomlyNegative") random = Random.Range(0, 5);
+        int length = PlayerPrefs.GetInt(openedNegativeEffect);
+        if (name == "RandomlyNegative") random = Random.Range(0, length);
         else random = SetNumber(name);
 
         return random;
@@ -66,11 +74,35 @@ public class NegativeCardsManager : MonoBehaviour
     int SetNumber(string name)
     {
         int num = 0;
-        if (name == "LowSpeed") num = 0;
-        else if (name == "AddTime") num = 1;
-        else if (name == "ObstacleSpeedUp") num = 2;
-        else if (name == "CreateCannon") num = 3;
-        else if (name == "Unmagnet") num = 4;
+        switch (name)
+        {
+            case "LowSpeed":
+                num = 0;
+                PlayerPrefs.SetInt(openedNegativeEffect, num + 1);
+                break;
+            case "AddTime":
+                num = 1;
+                PlayerPrefs.SetInt(openedNegativeEffect, num + 1);
+                break;
+            case "ObstacleSpeedUp":
+                num = 2;
+                PlayerPrefs.SetInt(openedNegativeEffect, num + 1);
+                break;
+            case "CreateCannon":
+                num = 3;
+                PlayerPrefs.SetInt(openedNegativeEffect, num + 1);
+                break;
+            case "Unmagnet":
+                num = 4;
+                PlayerPrefs.SetInt(openedNegativeEffect, num + 1);
+                break;
+        }
+        Debug.Log(PlayerPrefs.GetInt(openedNegativeEffect));
+        //if (name == "LowSpeed") num = 0;
+        //else if (name == "AddTime") num = 1;
+        //else if (name == "ObstacleSpeedUp") num = 2;
+        //else if (name == "CreateCannon") num = 3;
+        //else if (name == "Unmagnet") num = 4;
         return num;
     }
 
@@ -84,9 +116,9 @@ public class NegativeCardsManager : MonoBehaviour
 
     IEnumerator Unmagnet(float time)
     {
-        CoinManager.unmagnet = true;
+        CoinMovement.unmagnet = true;
         yield return new WaitForSeconds(time);
-        CoinManager.unmagnet = false;
+        CoinMovement.unmagnet = false;
     }
 
     IEnumerator ObstacleSpeedUp(float time)

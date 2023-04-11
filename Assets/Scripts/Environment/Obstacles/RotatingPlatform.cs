@@ -14,7 +14,6 @@ public class RotatingPlatform : MonoBehaviour
     {
         coeff = 1;
         if (direction == 0) SetDirectionRandomly();
-        Debug.Log(this.name + " " + direction);
     }
 
     // Update is called once per frame
