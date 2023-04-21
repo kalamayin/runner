@@ -11,16 +11,18 @@ public class FinishManager : MonoBehaviour
 
     [SerializeField] List<Image> starImages;
 
+    public static bool finishCheck;
+
     // Start is called before the first frame update
     void Start()
     {
-        
+        finishCheck = false;
     }
 
     // Update is called once per frame
     void Update()
     {
-        if (GameController.gameState == GameState.Finish)
+        if (GameController.gameState == GameState.Finish && finishCheck)
         {
             finishPanel.SetActive(true);
             SetStarImages();

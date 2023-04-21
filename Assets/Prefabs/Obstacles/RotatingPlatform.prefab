@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 2395121106345717023}
   - component: {fileID: 493666140461341141}
   - component: {fileID: 1231821482541816760}
+  - component: {fileID: 6703048236734000145}
   m_Layer: 0
   m_Name: RotatingPlatform
   m_TagString: Untagged
@@ -96,5 +97,20 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a8c69d7815d47e64294aedba8d023c36, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  direction: 0
   speed: 1
   frac: 50
+--- !u!136 &6703048236734000145
+CapsuleCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2150792959182354432}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  m_Radius: 0.3266149
+  m_Height: 0.7439175
+  m_Direction: 2
+  m_Center: {x: 0.00000003973643, y: -0.00000003973643, z: -0.00073060393}

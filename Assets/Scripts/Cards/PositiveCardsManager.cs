@@ -47,7 +47,8 @@ public class PositiveCardsManager : MonoBehaviour
     void SuperJump()
     {
         PlayerMovement movement = GameObject.FindGameObjectWithTag("Player").GetComponent<PlayerMovement>();
-        movement.playerRB.AddForce(dir * movement.jumpForce, ForceMode.Impulse);
+        movement.jumpCheck = true;
+        //movement.playerRB.AddForce(dir * movement.jumpForce);
     }
 
     void Invisible()
@@ -108,11 +109,6 @@ public class PositiveCardsManager : MonoBehaviour
                 PlayerPrefs.SetInt(openedPositiveEffect, num + 1);
                 break;
         }
-        //if (name == "SuperSpeed") num = 0;
-        //else if (name == "SuperJump") num = 1;
-        //else if (name == "Invisible") num = 2;
-        //else if (name == "Dash") num = 3;
-        //else if (name == "Magnet") num = 4;
         return num;
     }
 

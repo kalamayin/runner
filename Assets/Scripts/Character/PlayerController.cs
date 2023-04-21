@@ -4,7 +4,9 @@ using UnityEngine;
 
 public class PlayerController : MonoBehaviour
 {
-    
+    [SerializeField] float finishSpeed;
+
+    Vector3 finishPos;
 
     // Start is called before the first frame update
     void Start()
@@ -15,7 +17,9 @@ public class PlayerController : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        
+        if(GameController.gameState == GameState.Finish)
+            transform.position = Vector3.MoveTowards(transform.position, finishPos, finishSpeed * Time.deltaTime);
+        if (Vector3.Distance(transform.position, finishPos) <= 0.01f) FinishManager.finishCheck = true;
     }
 
     private void OnCollisionEnter(Collision collision)
@@ -27,7 +31,8 @@ public class PlayerController : MonoBehaviour
         else if (collision.gameObject.CompareTag("Finish"))
         {
             GameController.gameState = GameState.Finish;
-            Debug.Log("Finish line: " + GameController.gameState);
+            GetComponent<Rigidbody>().velocity = Vector3.zero;
+            finishPos = collision.gameObject.transform.position;
         }
     }
 
@@ -40,6 +45,10 @@ public class PlayerController : MonoBehaviour
         else if (other.gameObject.CompareTag("Negative"))
         {
             TouchCards(other.gameObject.tag, other.gameObject.name);
+        }
+        if (other.gameObject.CompareTag("Wall"))
+        {
+            GameController.gameState = GameState.GameOver;
         }
     }
 

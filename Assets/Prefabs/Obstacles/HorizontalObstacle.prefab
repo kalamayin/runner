@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 5411153348486415670}
   - component: {fileID: 7853345385272717820}
   - component: {fileID: 4655022020597756214}
+  - component: {fileID: 7185337429074183792}
   m_Layer: 0
   m_Name: HorizontalObstacle
   m_TagString: Obstacle
@@ -96,9 +97,22 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2578e9bc2b963f2448960aaeb35cda06, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  direction: 0
   points:
   - {x: 3, y: 0, z: 0}
   - {x: -3, y: 0, z: 0}
   patrolSpeed: 0.05
-  left: 0
-  right: 0
+--- !u!136 &7185337429074183792
+CapsuleCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8645869449318862889}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  m_Radius: 0.047330894
+  m_Height: 0.25618502
+  m_Direction: 1
+  m_Center: {x: 0, y: 0, z: 0}

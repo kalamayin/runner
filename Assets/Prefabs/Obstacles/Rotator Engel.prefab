@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 833098388}
   - component: {fileID: 833098387}
   - component: {fileID: 833098386}
+  - component: {fileID: 3306047020397957329}
   m_Layer: 0
   m_Name: RotatingStick (1)
   m_TagString: Untagged
@@ -97,6 +98,20 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   force: 10
+--- !u!136 &3306047020397957329
+CapsuleCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 833098384}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  m_Radius: 0.006896794
+  m_Height: 0.10686395
+  m_Direction: 2
+  m_Center: {x: 0, y: 0, z: 0.07578584}
 --- !u!1 &15413296011891710
 GameObject:
   m_ObjectHideFlags: 0
@@ -143,6 +158,7 @@ GameObject:
   - component: {fileID: 6322173021120028691}
   - component: {fileID: 2335227264132086019}
   - component: {fileID: 5592655332660478396}
+  - component: {fileID: 1516963434469115356}
   m_Layer: 0
   m_Name: RotatingStick
   m_TagString: Untagged
@@ -228,6 +244,20 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   force: 10
+--- !u!136 &1516963434469115356
+CapsuleCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 675041322570578240}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  m_Radius: 0.006896794
+  m_Height: 0.10686395
+  m_Direction: 2
+  m_Center: {x: 0, y: 0, z: 0.07578584}
 --- !u!1 &2356669272119092498
 GameObject:
   m_ObjectHideFlags: 0
@@ -240,6 +270,7 @@ GameObject:
   - component: {fileID: 4090397689558381881}
   - component: {fileID: 8398776826320910259}
   - component: {fileID: 8711954623633812426}
+  - component: {fileID: 5023991652659476714}
   m_Layer: 0
   m_Name: RotatingStick
   m_TagString: Untagged
@@ -325,6 +356,20 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   force: 10
+--- !u!136 &5023991652659476714
+CapsuleCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2356669272119092498}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  m_Radius: 0.006896794
+  m_Height: 0.10686395
+  m_Direction: 2
+  m_Center: {x: 0, y: 0, z: 0.07578584}
 --- !u!1001 &15413295727400585
 PrefabInstance:
   m_ObjectHideFlags: 0

@@ -97,12 +97,6 @@ public class NegativeCardsManager : MonoBehaviour
                 PlayerPrefs.SetInt(openedNegativeEffect, num + 1);
                 break;
         }
-        Debug.Log(PlayerPrefs.GetInt(openedNegativeEffect));
-        //if (name == "LowSpeed") num = 0;
-        //else if (name == "AddTime") num = 1;
-        //else if (name == "ObstacleSpeedUp") num = 2;
-        //else if (name == "CreateCannon") num = 3;
-        //else if (name == "Unmagnet") num = 4;
         return num;
     }
 
