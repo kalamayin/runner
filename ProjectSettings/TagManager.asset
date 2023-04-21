@@ -12,6 +12,7 @@ TagManager:
   - Negative
   - Positive
   - Coin
+  - Wall
   layers:
   - Default
   - TransparentFX
