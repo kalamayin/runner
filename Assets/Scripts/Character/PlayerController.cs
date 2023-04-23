@@ -20,6 +20,8 @@ public class PlayerController : MonoBehaviour
         if(GameController.gameState == GameState.Finish)
             transform.position = Vector3.MoveTowards(transform.position, finishPos, finishSpeed * Time.deltaTime);
         if (Vector3.Distance(transform.position, finishPos) <= 0.01f) FinishManager.finishCheck = true;
+
+        if (transform.position.y <= -30f) gameObject.SetActive(false);
     }
 
     private void OnCollisionEnter(Collision collision)

@@ -25,8 +25,10 @@ public class CardImageManager : MonoBehaviour
         imageTransform.rotation = Quaternion.identity;
         imageTransform.sizeDelta = imageScale;
         StartCoroutine(WaitForAnim());
-        target = RectTransformUtility.WorldToScreenPoint(Camera.main, positiveButtons[CardManager.buttonIndex].transform.position);
-        SetIndex();
+        //target = RectTransformUtility.WorldToScreenPoint(Camera.main, positiveButtons[index].transform.position);
+        target = positiveButtons[index].transform.position;
+        Debug.Log("Normal pos: " + positiveButtons[index].transform.position + " transform pos: " + target);
+        //SetIndex();
     }
 
     // Update is called once per frame
@@ -37,7 +39,7 @@ public class CardImageManager : MonoBehaviour
             Vector2 obj;
             obj = RectTransformUtility.WorldToScreenPoint(Camera.main, gameObject.transform.position);
             
-            gameObject.transform.position = Vector2.MoveTowards(obj, target, speed);
+            gameObject.transform.position = Vector2.MoveTowards(transform.position, target, speed);
             imageTransform.sizeDelta = Vector2.MoveTowards(imageTransform.sizeDelta,
                 positiveButtons[CardManager.buttonIndex].sizeDelta, scaleSpeed);
             imageTransform.Rotate(new Vector3(0f, rotateSpeed, 0f));

@@ -1,6 +1,5 @@
 using System.Collections;
 using UnityEngine;
-using static UnityEditor.Timeline.Actions.MenuPriority;
 
 public class PositiveCardsManager : MonoBehaviour
 {
@@ -47,8 +46,8 @@ public class PositiveCardsManager : MonoBehaviour
     void SuperJump()
     {
         PlayerMovement movement = GameObject.FindGameObjectWithTag("Player").GetComponent<PlayerMovement>();
-        movement.jumpCheck = true;
-        //movement.playerRB.AddForce(dir * movement.jumpForce);
+        //movement.jumpCheck = true;
+        movement.playerRB.AddForce(dir * movement.jumpForce, ForceMode.Impulse);
     }
 
     void Invisible()

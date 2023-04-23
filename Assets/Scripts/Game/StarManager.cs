@@ -60,6 +60,8 @@ public class StarManager : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        positiveCardCount = 0;
+        negativeCardCount = 0;
         for(int i = 0; i < goalTexts.Count; i++)
         {
             goalCheck.Add(false);

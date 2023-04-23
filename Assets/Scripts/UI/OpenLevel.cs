@@ -17,8 +17,6 @@ public class OpenLevel : MonoBehaviour
     {
         //PlayerPrefs.DeleteKey("MaxLevel");
         if (!PlayerPrefs.HasKey("MaxLevel")) PlayerPrefs.SetInt("MaxLevel", 1);
-        //PlayerPrefs.SetInt("MaxLevel", 3);
-        Debug.Log("Level: " + PlayerPrefs.GetInt("MaxLevel"));
         SceneManager.LoadScene(PlayerPrefs.GetInt("MaxLevel"));
     }
 

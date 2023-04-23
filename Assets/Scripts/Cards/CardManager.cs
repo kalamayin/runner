@@ -65,7 +65,7 @@ public class CardManager : MonoBehaviour
         System.Delegate[] positives = positiveEffects.positiveEffects.GetInvocationList();
         ((PositiveCardsManager.PositiveEffects)positives[index]).Invoke();
 
-        Button button = EventSystem.current.currentSelectedGameObject.GetComponent<Button>();
+        Button button = effectButtons[buttonIndex]; //EventSystem.current.currentSelectedGameObject.GetComponent<Button>();
         button.interactable = false;
         button.image.sprite = default;
 

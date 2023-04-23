@@ -26,8 +26,7 @@ public class ButtonManager : MonoBehaviour
         int buildIndex = SceneManager.GetActiveScene().buildIndex + 1;
         int totalIndex = SceneManager.sceneCountInBuildSettings;
 
-        PlayerPrefs.SetInt("MaxLevel", buildIndex);
-        Debug.Log(PlayerPrefs.GetInt("MaxLevel"));
+        if(buildIndex > PlayerPrefs.GetInt("MaxLevel"))PlayerPrefs.SetInt("MaxLevel", buildIndex);
 
         if(buildIndex < totalIndex) SceneManager.LoadScene(buildIndex);
     }

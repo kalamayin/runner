@@ -25,4 +25,11 @@ public class CameraTracking : MonoBehaviour
 
         transform.LookAt(target);
     }
+
+    private void Update()
+    {
+        float yClamp = Mathf.Clamp(transform.position.y, 2f, 20f);
+        float xClamp = Mathf.Clamp(transform.position.x, -4f, 4f);
+        transform.position = new Vector3(xClamp, yClamp, transform.position.z);
+    }
 }
