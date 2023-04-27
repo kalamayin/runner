@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using static PositiveCardsManager;
 
 public class NegativeCardsManager : MonoBehaviour
 {
@@ -23,16 +24,38 @@ public class NegativeCardsManager : MonoBehaviour
 
     private void Awake()
     {
-        if (!PlayerPrefs.HasKey(openedNegativeEffect)) PlayerPrefs.SetInt(openedNegativeEffect, 1);
+        //PlayerPrefs.DeleteKey(openedNegativeEffect);
+        //PlayerPrefs.DeleteAll();
+        if (!PlayerPrefs.HasKey(openedNegativeEffect)) PlayerPrefs.SetInt(openedNegativeEffect, 0);
     }
 
     private void Start()
     {
+        //PlayerPrefs.DeleteKey(openedNegativeEffect);
+        //PlayerPrefs.DeleteKey("ObstacleSpeedUp");
         negativeEffects += LowSpeed;
         negativeEffects += AddTime;
         negativeEffects += ObstacleSpeedUp;
         negativeEffects += CreateCannon;
         negativeEffects += Unmagnet;
+        SetNegativeCardNumber();
+        Debug.Log("Negative: " + PlayerPrefs.GetInt(openedNegativeEffect));
+        
+    }
+
+    void SetNegativeCardNumber()
+    {
+        GameObject[] positiveCards = GameObject.FindGameObjectsWithTag("Negative");
+        int num = PlayerPrefs.GetInt(openedNegativeEffect);
+
+        foreach (GameObject obj in positiveCards)
+        {
+            if (obj.name != "RandomlyNegative" && !PlayerPrefs.HasKey(obj.name))
+            {
+                PlayerPrefs.SetString(obj.name, "opened");
+                PlayerPrefs.SetInt(openedNegativeEffect, num + 1);
+            }
+        }
     }
 
     void LowSpeed()
@@ -78,23 +101,18 @@ public class NegativeCardsManager : MonoBehaviour
         {
             case "LowSpeed":
                 num = 0;
-                PlayerPrefs.SetInt(openedNegativeEffect, num + 1);
                 break;
             case "AddTime":
                 num = 1;
-                PlayerPrefs.SetInt(openedNegativeEffect, num + 1);
                 break;
             case "ObstacleSpeedUp":
                 num = 2;
-                PlayerPrefs.SetInt(openedNegativeEffect, num + 1);
                 break;
             case "CreateCannon":
                 num = 3;
-                PlayerPrefs.SetInt(openedNegativeEffect, num + 1);
                 break;
             case "Unmagnet":
                 num = 4;
-                PlayerPrefs.SetInt(openedNegativeEffect, num + 1);
                 break;
         }
         return num;

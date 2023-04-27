@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 705507994}
-  m_IndirectSpecularColor: {r: 0.44657898, g: 0.4964133, b: 0.5748178, a: 1}
+  m_IndirectSpecularColor: {r: 0.44657844, g: 0.49641222, b: 0.57481694, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -7684,6 +7684,14 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2332260443263219776, guid: 941f6700791003a48ad13f9c47a66637, type: 3}
       propertyPath: m_AnchoredPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2332260443946332347, guid: 941f6700791003a48ad13f9c47a66637, type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2332260444207973157, guid: 941f6700791003a48ad13f9c47a66637, type: 3}
+      propertyPath: m_AnchorMax.y
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 2332260444393500605, guid: 941f6700791003a48ad13f9c47a66637, type: 3}
@@ -16344,8 +16352,8 @@ BoxCollider:
   m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 1, y: 1.43, z: 0.1}
-  m_Center: {x: 0, y: 0, z: 0}
+  m_Size: {x: 1, y: 5.882718, z: 0.1}
+  m_Center: {x: 0, y: 2.2263591, z: 0}
 --- !u!4 &1211678746746132123
 Transform:
   m_ObjectHideFlags: 0
@@ -16643,6 +16651,14 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 1247363708079709436, guid: d24a3128c6d74ac46a91f7527f4dfa29, type: 3}
+      propertyPath: m_Size.y
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 1247363708079709436, guid: d24a3128c6d74ac46a91f7527f4dfa29, type: 3}
+      propertyPath: m_Center.y
+      value: 2.25
+      objectReference: {fileID: 0}
     - target: {fileID: 6248191327921368430, guid: d24a3128c6d74ac46a91f7527f4dfa29, type: 3}
       propertyPath: m_RootOrder
       value: 6
@@ -16761,6 +16777,14 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 1101999723742270358, guid: dbfa3041593280b4f9446898fbf1b676, type: 3}
+      propertyPath: m_Size.y
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 1101999723742270358, guid: dbfa3041593280b4f9446898fbf1b676, type: 3}
+      propertyPath: m_Center.y
+      value: 2.25
+      objectReference: {fileID: 0}
     - target: {fileID: 4084260451425423464, guid: dbfa3041593280b4f9446898fbf1b676, type: 3}
       propertyPath: m_RootOrder
       value: 4
@@ -17461,8 +17485,8 @@ BoxCollider:
   m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 1, y: 1.43, z: 0.1}
-  m_Center: {x: 0, y: 0, z: 0}
+  m_Size: {x: 1, y: 6, z: 0.1}
+  m_Center: {x: 0, y: 2.25, z: 0}
 --- !u!4 &8870967249197655307
 Transform:
   m_ObjectHideFlags: 0

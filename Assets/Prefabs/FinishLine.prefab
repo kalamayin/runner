@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 1920399379838757746}
   - component: {fileID: 1920399379838757645}
   - component: {fileID: 1920399379838757644}
-  - component: {fileID: 1920399379838757647}
+  - component: {fileID: 8248867748565050408}
   m_Layer: 0
   m_Name: FinishLine
   m_TagString: Finish
@@ -84,17 +84,16 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
---- !u!64 &1920399379838757647
-MeshCollider:
+--- !u!65 &8248867748565050408
+BoxCollider:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1920399379838757646}
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_Enabled: 1
-  serializedVersion: 4
-  m_Convex: 0
-  m_CookingOptions: 30
-  m_Mesh: {fileID: 10209, guid: 0000000000000000e000000000000000, type: 0}
+  serializedVersion: 2
+  m_Size: {x: 10, y: 34.98357, z: 9.999999}
+  m_Center: {x: 0, y: 17.446783, z: 0}

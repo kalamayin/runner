@@ -13,6 +13,10 @@ TagManager:
   - Positive
   - Coin
   - Wall
+  - CoinText
+  - TotalCoinText
+  - DuringGameUI
+  - Joystick
   layers:
   - Default
   - TransparentFX

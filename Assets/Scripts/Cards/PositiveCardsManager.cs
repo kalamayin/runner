@@ -1,4 +1,5 @@
 using System.Collections;
+using System.Collections.Generic;
 using UnityEngine;
 
 public class PositiveCardsManager : MonoBehaviour
@@ -25,16 +26,35 @@ public class PositiveCardsManager : MonoBehaviour
 
     private void Awake()
     {
-        if (!PlayerPrefs.HasKey(openedPositiveEffect)) PlayerPrefs.SetInt(openedPositiveEffect, 1);
+        if (!PlayerPrefs.HasKey(openedPositiveEffect)) PlayerPrefs.SetInt(openedPositiveEffect, 0);
     }
 
     private void Start()
     {
+        //PlayerPrefs.DeleteKey(openedPositiveEffect);
+        //PlayerPrefs.DeleteKey("Dash");
         positiveEffects += SuperSpeed;
         positiveEffects += SuperJump;
-        positiveEffects += Invisible;
         positiveEffects += Dash;
+        positiveEffects += Invisible;
         positiveEffects += Magnet;
+        SetPositiveCardNumber();
+        Debug.Log("Positive: " + PlayerPrefs.GetInt(openedPositiveEffect));
+    }
+
+    void SetPositiveCardNumber()
+    {
+        GameObject[] positiveCards = GameObject.FindGameObjectsWithTag("Positive");
+        int num = PlayerPrefs.GetInt(openedPositiveEffect);
+
+        foreach(GameObject obj in positiveCards)
+        {
+            if(obj.name != "RandomlyPositive" && !PlayerPrefs.HasKey(obj.name))
+            {
+                PlayerPrefs.SetString(obj.name, "opened");
+                PlayerPrefs.SetInt(openedPositiveEffect, num + 1);
+            }
+        }
     }
 
 
@@ -89,23 +109,18 @@ public class PositiveCardsManager : MonoBehaviour
         {
             case "SuperSpeed":
                 num = 0;
-                PlayerPrefs.SetInt(openedPositiveEffect, num + 1);
                 break;
             case "SuperJump":
                 num = 1;
-                PlayerPrefs.SetInt(openedPositiveEffect, num + 1);
-                break;
-            case "Invisible":
-                num = 2;
-                PlayerPrefs.SetInt(openedPositiveEffect, num + 1);
                 break;
             case "Dash":
+                num = 2;
+                break;
+            case "Invisible":
                 num = 3;
-                PlayerPrefs.SetInt(openedPositiveEffect, num + 1);
                 break;
             case "Magnet":
                 num = 4;
-                PlayerPrefs.SetInt(openedPositiveEffect, num + 1);
                 break;
         }
         return num;

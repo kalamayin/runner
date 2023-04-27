@@ -13,6 +13,8 @@ public class FinishManager : MonoBehaviour
 
     public static bool finishCheck;
 
+    bool duringGameUICheck = true;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -22,9 +24,15 @@ public class FinishManager : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        if (duringGameUICheck && GameController.gameState == GameState.Finish)
+        {
+            duringGameUICheck = false;
+            GameObject.FindGameObjectWithTag("DuringGameUI").SetActive(false);
+        }
         if (GameController.gameState == GameState.Finish && finishCheck)
         {
             finishPanel.SetActive(true);
+            CoinManager.totalCoinTextCheck = true;
             SetStarImages();
             SaveStarInfo();
         }

@@ -9,6 +9,7 @@ public class ButtonManager : MonoBehaviour
     public void PlayButton()
     {
         GameController.gameState = GameState.Playing;
+        CoinManager.coinTextCheck = true;
     }
 
     public void PauseButton()
@@ -26,7 +27,7 @@ public class ButtonManager : MonoBehaviour
         int buildIndex = SceneManager.GetActiveScene().buildIndex + 1;
         int totalIndex = SceneManager.sceneCountInBuildSettings;
 
-        if(buildIndex > PlayerPrefs.GetInt("MaxLevel"))PlayerPrefs.SetInt("MaxLevel", buildIndex);
+        if(buildIndex > PlayerPrefs.GetInt("MaxLevel") && buildIndex < totalIndex - 1)PlayerPrefs.SetInt("MaxLevel", buildIndex);
 
         if(buildIndex < totalIndex) SceneManager.LoadScene(buildIndex);
     }

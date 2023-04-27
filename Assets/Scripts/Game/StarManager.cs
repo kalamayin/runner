@@ -137,7 +137,7 @@ public class StarManager : MonoBehaviour
 
     void CollectCoin()
     {
-        goalTexts[index].text = goalExplanationTexts[index] + PointManager.coinValue.ToString() + "/" + maxCounts[index].ToString();
+        goalTexts[index].text = goalExplanationTexts[index] + CoinManager.coinCount.ToString() + "/" + maxCounts[index].ToString();
         if (GameController.gameState == GameState.Finish) goalCheck[index] = CheckGoal(PointManager.coinValue, maxCounts[index], 0);
 
         SetIndex();

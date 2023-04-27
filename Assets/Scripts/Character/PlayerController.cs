@@ -30,12 +30,7 @@ public class PlayerController : MonoBehaviour
         {
             GameController.gameState = GameState.GameOver;
         }
-        else if (collision.gameObject.CompareTag("Finish"))
-        {
-            GameController.gameState = GameState.Finish;
-            GetComponent<Rigidbody>().velocity = Vector3.zero;
-            finishPos = collision.gameObject.transform.position;
-        }
+         
     }
 
     private void OnTriggerEnter(Collider other)
@@ -51,6 +46,12 @@ public class PlayerController : MonoBehaviour
         if (other.gameObject.CompareTag("Wall"))
         {
             GameController.gameState = GameState.GameOver;
+        }
+        if (other.gameObject.CompareTag("Finish"))
+        {
+            GameController.gameState = GameState.Finish;
+            GetComponent<Rigidbody>().velocity = Vector3.zero;
+            finishPos = other.gameObject.transform.position;
         }
     }
 

@@ -27,7 +27,6 @@ public class CardImageManager : MonoBehaviour
         StartCoroutine(WaitForAnim());
         //target = RectTransformUtility.WorldToScreenPoint(Camera.main, positiveButtons[index].transform.position);
         target = positiveButtons[index].transform.position;
-        Debug.Log("Normal pos: " + positiveButtons[index].transform.position + " transform pos: " + target);
         //SetIndex();
     }
 
